@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.navigation-bar {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #E9ECEF;
+    width: 100vw;
+    align-items: center;
+}
+
+.navigation-bar a:link {
+    color: #212529;
+    text-decoration: none;
+}
+
+.navigation-bar a:visited {
+    color: #212529;
+    text-decoration: none;
+}
+
+.navigation-bar a:hover {
+    color: #003366;;
+    text-decoration: none;
+}
+
+.navigation-bar a:active {
+    color: #ffffff;
+    background-color: #003366;
+    text-decoration: none;
+}
+
+.navigation-bar-link {
+    padding: 20px;
+    margin: 0;
+}
+
+.navigation-bar-logins {
+    display: flex;
+    padding: .5vw;
+}
+.navigation-bar-logins ul {
+    display: flex;
+    padding: 20px;
+    
+}
+
+.navigation-bar-logins li {
+    display: flex;
+    list-style-type: none;
+    margin: 0 .5vw;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-information-container {
+    width: 82vw;
+    padding: 1.5rem 3rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.index-information-container h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: 1rem;
+    margin: 0;
+    display: block;
+    color: #212529;
+}
+
+.index-information-container p {
+    font-size: 1.5rem;
+    padding: 0 8rem 1rem 1rem;
+    font-weight: 300;
+    display: block;
+    margin: 0;
+    color: #212529;
+}
+
+.index-information-container a:link {
+    text-decoration: none;
+    color: #4286f4;
+}
+
+.index-information-container a:visited {
+    color: #4286f4;
+    text-decoration: none;
+}
+
+.index-information-container a:hover {
+    color: #003366;;
+    text-decoration: none;
+}
+
+.index-information-container a:active {
+    color: #ffffff;
+    background-color: #003366;
+    text-decoration: none;
+}
+
+.companies-information-container {
+    box-sizing: border-box;
+    width: 95vw;
+    display: block;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.companies-information-container h1 {
+    font-size: 6.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: .5rem 2.5rem;
+    margin: 0;
+    font-family: inherit;
+    display: block;
+}
+.companies-information-container p {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: .5rem 2.5rem;
+    margin: 0;
+    display: block;
+}
+
+.companies-information-container a {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    background-color: #003366;;
+    border-color: #003366;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+}
+
+#companies-entered {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 98vw;
+    margin: 0 0 0 ;
+}
+
+#companies-entered img {
+    /* display: flex; */
+    margin: 3vw;
+    max-width: 18vw;
+    height: auto;
+}
+/* color: #E9ECEF */
