@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>The Boston Software Jobs Database</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./index.html">BostonSWJobs</a>
+        </div>
+
+        <div class="collapse navbar-collapse">  <!-- Begin right-hand side of navbar -->
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Sign up</a></li>
+          </ul>
+        </div>  <!-- End right-hand side of navbar -->
+      </div>  <!-- End of container-fluid -->
+    </nav> <!-- End of navbar -->
+
+    <div class='container'>
+      <header class='jumbotron'>
+        <div class='container'>
+          <h1>Boston Software Employers</h1>
+          <p>Here is our list of the top software employers in the Boston area.</p>
+        </div> <!-- End of container div -->
+      </header>
+
+      <button id="displayAll" class='btn btn-primary btn-large'>Display list</button>
+      <button id="alphabetize" class='btn btn-primary btn-large'>Alphabetize</button>
+      
+      <div id="companies-entered">
+        <!-- Company profiles will go here once entered by user.  -->
+      </div>
+      <br>
+      <p>Enter the information for a new company below.</p>
+      
+      <label for="compName" class="input-labels">Name: </label>
+      <input type="text" placeholder="Name" id="compName" class="text-inputs" size="90"><br>
+      
+      <label for="compLogo" class="input-labels">URL: </label>
+      <input type="text" placeholder="URL for company's logo" id="compLogo" class="text-inputs" size="90"><br>
+      
+      <label for="compBlurb" class="input-labels">Blurb: </label>
+      <textarea placeholder="About the company" class="blurb-input" id="compBlurb"></textarea>
+
+      <div>
+        <button id="addCompany" class='btn btn-primary btn-large'>Add a company</button>
+        <button id="clearBtn" class='btn btn-primary btn-large'>Clear</button>
+      </div>
+    </div> <!-- End of container div -->
+    <br>
+    <p>Trademark 2018-2020 by CodeSquad at Lena Park</p>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
