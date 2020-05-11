@@ -73,10 +73,17 @@ app.get('/jobs', (request, response) => {
 app.get('/company/:company_name', (request, response) => {
     const params = request.params;
     const companyPath = params.company_name;
+    const companyLogo = COMPANIES[companyPath].logo;
+    const companyDescription = COMPANIES[companyPath].description;
     response.render('company', {
         name: companyPath,
+        logo: companyLogo,
+        description: companyDescription,
     });
 });
 
 // Server is started on the given PORT
 app.listen(PORT, () => {console.log(`Server running on port: ${PORT}`)});
+
+
+
