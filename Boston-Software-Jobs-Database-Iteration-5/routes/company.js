@@ -45,7 +45,9 @@ const COMPANIES = {
     },
 }
 
-companyRouter.get('/company/:company_name', (request, response) => {
+
+
+companyRouter.get('/:company_name', (request, response) => {
     const params = request.params;
     const companyPath = params.company_name;
     const companyLogo = COMPANIES[companyPath].logo;
@@ -56,3 +58,10 @@ companyRouter.get('/company/:company_name', (request, response) => {
         description: companyDescription,
     });
 });
+
+module.exports = companyRouter;
+
+// CREATE A NEW COMPANY
+
+
+// READ THE PAGE IN ORDER TO CREATE NEW COMPANY

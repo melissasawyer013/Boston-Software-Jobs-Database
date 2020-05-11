@@ -51,10 +51,12 @@ function get_company_names_as_list() {
     return Object.keys(COMPANIES);
 }
 
-jobsRouter.get('/jobs', (request, response) => {
+jobsRouter.get('/', (request, response) => {
     let companyNames = get_company_names_as_list();
     response.render('jobs', {
         companyList: companyNames,
     });
 });
+
+module.exports = jobsRouter;
 
