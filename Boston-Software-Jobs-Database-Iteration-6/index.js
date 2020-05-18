@@ -55,6 +55,48 @@ app.get('/jobs', (req, res) => {
     });
 });
 
+app.get('/view/:company_name', (req, res) => {
+    const parameters = req.params;
+    const companyName = parameters['company_name'];
+    db_handler.collection(COLLECTION_NAME).find({name: companyName}).toArray((err, result) => {
+        if (err) {
+            res.send(`Company not found.`);
+            console.log(err);
+        } else {
+            res.render('company', {
+                'single_company': result[0]
+            });
+        };
+    });
+});
+
+app.get('/updateCompany/:company_name', (req, res) => {
+    const parameters = req.params;
+    const companyName = parameters['company_name'];
+    const nowHiring = {$set: { hiring: 'Yes' }};
+    db_handler.collection(COLLECTION_NAME).updateOne( {name: companyName}, nowHiring, (err, result) => {
+        if (err) {
+            res.send(`Could not update the company hiring status.`);
+            console.log(err);
+        } else {
+            res.redirect('/view/' + companyName);
+        }
+    });
+});
+
+app.get('/delete/:company_name', (req, res) => {
+    const parameters = req.params;
+    const companyName = parameters['company_name'];
+    db_handler.collection(COLLECTION_NAME).deleteOne({name: companyName}, (err, result) => {
+        if (err) {
+            res.send(`Could not delete the company,`);
+            console.log(err);
+        } else {
+            res.redirect('/jobs');
+        }
+    });
+});
+
 app.post('/add', (req, res) => {
     // This is where you will get a POST request on the '/add' route. 
     // Step 5. Add your logic here to add a new company to the database.

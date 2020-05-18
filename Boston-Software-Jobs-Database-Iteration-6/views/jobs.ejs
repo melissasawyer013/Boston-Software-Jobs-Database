@@ -9,7 +9,7 @@
     <h1>List of Current Companies</h1>
     
     <% all_companies.forEach( (single_company) => { %>
-        <%= single_company.name %>
+        <a href="/view/<%= single_company.name %> "> <%= single_company.name %> </a> <br>
         <br><br>
     <% }) %>
     
